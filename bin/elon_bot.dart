@@ -21,6 +21,6 @@ void main() async {
       );
     });
   } catch (e) {
-    print(e.toString());
+    print("Error: binnima error\n ${e.toString()}");
   }
 }
