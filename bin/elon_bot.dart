@@ -14,7 +14,9 @@ void main() async {
     teleDart.start();
 
     teleDart.onMessage().listen((event) {
-      teleDart.sendMessage(event.chat.id, event.text!);
+      for (var i = 0; i < 1000; i++) {
+        teleDart.sendMessage(event.chat.id, "${event.text!} \ncount: $i");
+      }
     });
   } catch (e) {
     print(e.toString());
