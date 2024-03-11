@@ -9,8 +9,8 @@ void main() async {
     var telegram = await Telegram(TOKEN).getMe();
 
     var teleDart = TeleDart(TOKEN, Event(telegram.username!));
-    // var res = await teleDart.deleteWebhook();
-    // print("Delete Webhook: $res");
+    var res = await teleDart.deleteWebhook();
+    print("Delete Webhook: $res");
     teleDart.start();
 
     teleDart.onMessage().listen((event) {
